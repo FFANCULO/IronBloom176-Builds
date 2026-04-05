@@ -1,73 +1,64 @@
-# Iron Bloom 176
+# Unglare
 
-### Analog time-domain artifacts for cymbals and transient-rich material
+### Cymbals in the mix, not in your face
 
-A cymbal hit explodes with thousands of simultaneous modes. Analog hardware — tubes, transformers, tape — didn't just record this. It reshaped it. Phase smear spread the transient across time. Variable-mu compression squeezed the peak while lifting the sustain. Transformer saturation filled the spectral gaps with harmonics. Magnetic hysteresis added density. Tape drift kept the sustain alive and breathing.
+The problem was never frequency. It was *time*. EQ cuts brightness but kills presence. Unglare spreads high-frequency transient energy across time using phase dispersion — your brain hears the same brightness but interprets it as depth instead of aggression. Cymbals move from "at the speaker cone" to "in the room."
 
-**Iron Bloom 176** recreates these artifacts as a plugin. Twelve controls shape how the signal interacts with a virtual analog chain: tube compression, transformer saturation, intermodulation distortion, magnetic hysteresis, pitch drift, and spectral stabilization. A real-time 3D spectrum analyzer shows you exactly what's changing — the peaks and valleys of your frequency content reshaping as the analog chain works.
+Twelve controls shape how your signal interacts with a chain of analog imperfections: asymmetric saturation, magnetic hysteresis, pitch drift, phase smear, transformer resonance. A 3D spectrum analyzer shows you the peaks and valleys reshaping in real-time.
 
 ---
 
 ## Downloads
 
 ### Windows (x64) — VST3
-Copy the `windows/IronBloom176.vst3` folder to:
+Copy the `windows/Unglare.vst3` folder to:
 ```
 C:\Program Files\Common Files\VST3\
 ```
-Works in Reaper, Ableton, Bitwig, Studio One, Cubase, FL Studio.
 
 ### macOS (ARM64 / Apple Silicon) — VST3
-Copy `macos/IronBloom176.vst3` to:
+Copy `macos/Unglare.vst3` to:
 ```
 ~/Library/Audio/Plug-Ins/VST3/
 ```
-Works in Reaper, Ableton, Bitwig, Studio One, Cubase, FL Studio.
 
 ### macOS (ARM64 / Apple Silicon) — Audio Units
-Copy `macos/IronBloom176.component` to:
+Copy `macos/Unglare.component` to:
 ```
 ~/Library/Audio/Plug-Ins/Components/
 ```
-Works in Logic Pro, GarageBand, Final Cut Pro.
 
 ### macOS note (unsigned)
-These builds are not code-signed. On first use, macOS will block them. Fix with:
+These builds are not code-signed. On first use:
 ```bash
-xattr -d com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/IronBloom176.vst3
-xattr -d com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/IronBloom176.component
+xattr -d com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/Unglare.vst3
+xattr -d com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/Unglare.component
 ```
 Or right-click the plugin in Finder and choose Open.
 
 ---
 
-## What the controls do to your sound
+## Controls
 
-| Control | Effect |
-|---------|--------|
-| **Depth** | How far into the analog chain the signal travels |
-| **HF Smear** | Spreads high-frequency transients across time (allpass phase dispersion) |
-| **Transient Softening** | Rounds off the sharp leading edge of each hit |
-| **Pitch Drift** | Micro-detuning instability in the sustain (tape wow) |
-| **Tube Bend** | Variable-mu compression — squeezes peaks, lifts sustain |
-| **Transformer Drive** | Pushes the signal into smooth tanh saturation |
+| Control | What it does |
+|---------|-------------|
+| **Depth** | How far into the analog chain |
+| **HF Smear** | Phase dispersion — pushes cymbals back in the mix |
+| **Transient Softening** | Envelope-dependent HF rolloff on loud transients |
+| **Pitch Drift** | Micro-detuning instability in the sustain |
+| **Tube Bend** | Envelope-dependent gain reduction |
+| **Transformer Drive** | Asymmetric saturation depth |
 | **Stereo** | Independent L/R processing vs mono sum |
-| **Output Gain** | Level after processing |
+| **Output Gain** | Level compensation |
 | **Wet Mix** | Dry/wet blend |
-| **Anti-Digital** | Intermodulation distortion + even harmonics (analog thickness) |
-| **Bloom** | Transformer resonance — body and ring on each hit |
+| **Anti-Digital** | Intermodulation distortion + even harmonics |
+| **Bloom** | Transformer resonance Q — body and ring on hits |
 | **Transient Bend** | Time-domain reshaping of attack envelopes |
 
-## The display
+## Display
 
-Click the waveform area to toggle views:
-
-- **Waveform** — input (red) vs output (amber) overlay. See transients reshape in real-time.
-- **3D Spectrum** — ridgeline waterfall from 500 Hz up. Red peaks (input) behind, amber peaks (output) in front. Watch saturation add harmonics, HF smear redistribute energy, and the spectral stabilizer hold the balance.
+Click to toggle: **Waveform** (input red, output amber) or **3D Spectrum** (ridgeline waterfall from 500 Hz up).
 
 ---
 
-## Version
-**v1.9.4** — Built by ChatGPT, Grok, and Pietro
-
-Source code: private repository
+**v2.1.2** — Built by ChatGPT, Grok, Claude, and Pietro
