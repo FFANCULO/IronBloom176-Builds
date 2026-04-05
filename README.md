@@ -63,4 +63,4 @@ Click to toggle: **Waveform** (input red, output amber) or **3D Spectrum** (ridg
 
 Works in Reaper, Ableton, Logic, Bitwig, Studio One, Cubase, FL Studio, GarageBand.
 
-**v2.1.2** — Built by ChatGPT, Grok, Claude, and Pietro
+**v2.1.2**
