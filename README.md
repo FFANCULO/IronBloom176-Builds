@@ -1,5 +1,7 @@
 # Unglare
 
+![Unglare](screenshot.png)
+
 ### Remove the glare. Keep the brightness.
 
 Harsh cymbals. Brittle synths. Crispy drum machines. Sibilant vocals. Full mixes where the top end fatigues after 30 seconds. The problem isn't frequency — it's *time*. EQ removes energy. Unglare spreads it. Your brain hears the same brightness but interprets it as depth instead of aggression.
